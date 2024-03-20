@@ -1,0 +1,378 @@
+:root {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+  }
+  
+  .container {
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+  }
+  
+  .row>* {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+  }
+  
+  /* # General
+  =================================================*/
+  
+  h6,
+  .h6,
+  h5,
+  .h5,
+  h4,
+  .h4,
+  h3,
+  .h3,
+  h2,
+  .h2,
+  h1,
+  .h1 {
+    font-weight: 700 !important;
+    line-height: 1.5;
+    text-transform: capitalize;
+  }
+  
+  h1,
+  .h1 {
+    font-size: clamp(1.2rem, calc(1.2rem + 1.5vw), 2.5rem) !important;
+  }
+  
+  h2,
+  .h2 {
+    font-size: clamp(1.325rem, calc(1.325rem + 0.9vw), 2rem) !important;
+  }
+  
+  h3,
+  .h3 {
+    font-size: clamp(1.3rem, calc(1.3rem + 0.6vw), 1.75rem) !important;
+  }
+  
+  h4,
+  .h4 {
+    font-size: clamp(1.275rem, calc(1.275rem + 0.3vw), 1.5rem) !important;
+  }
+  
+  h5,
+  .h5 {
+    font-size: 1.25rem !important;
+  }
+  
+  h6,
+  .h6 {
+    font-size: 1rem !important;
+  }
+  
+  .all-page :is(h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6) {
+    margin-bottom: 15px !important;
+  }
+  
+  
+  img,
+  svg {
+    vertical-align: middle;
+  }
+
+  form input {
+    width: 100%;
+    padding: 22px;
+    border-radius: 4px;
+  }
+  
+  input,
+  button,
+  textarea {
+    font-size: 1rem;
+  }
+  
+  
+  button {
+    cursor: pointer;
+    border: unset;
+  }
+
+  [role=button] {
+    cursor: pointer
+}
+  
+
+  
+  figure {
+    max-width: 100%;
+  }
+  
+  body {
+    word-wrap: break-word;
+  }
+  
+  /* # Common Class
+  =================================================*/
+  
+ 
+  
+  /* # Common Components
+  =================================================*/
+  
+  /* Breadcrumbs ___________Starts */
+ 
+  
+ 
+  
+  /* Site Cards_____________Starts */
+ 
+  
+  /* Separator_____________Start*/
+ 
+  
+  /*Sep button_____________Start*/
+  
+  
+  /* Social Icons _____________Start*/
+
+  
+  /* pagination_____________start */
+  
+  .pagination {
+    margin-top: 50px;
+  }
+  
+  .pagination,
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .page-numbers {
+    height: 38px;
+    width: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    z-index: 1;
+  }
+  
+  .page-numbers::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .page-numbers:hover:before,
+  .page-numbers:focus:before {
+    transform: rotate(-90deg);
+    border-style: solid;
+  }
+  
+  
+  /* # Header
+  =================================================*/
+ 
+  /* # Home Page
+  =================================================*/
+ 
+  
+  /* # Single Page
+  =================================================*/
+  
+  /* Blog header _____________start */
+ 
+  
+  /* Blog sidebar_____________start */
+ 
+  
+  /* table of contents */
+  
+  /* Blog Contents _____________start */
+  
+  /* table */
+  
+  /* related post */
+  
+  /* pros-cons */
+  
+  /* widgets */
+  
+  /* Accordians faq */
+ 
+  
+  /* # All Author Page
+  =================================================*/
+ 
+  
+  /* # Author Single Page 
+  =================================================*/
+  
+  
+  /* # Contact Page Templates
+  =================================================*/
+  
+  
+  /* # Thank You || Search Not Found  || 404 Page
+  =================================================*/
+  
+  
+  /* # Footer
+  =================================================*/
+ 
+  
+  /* # Scroll top button
+  =================================================*/
+  #myBtn {
+    position: fixed;
+    bottom: 48px;
+    height: 45px;
+    width: 45px;
+    right: 21px;
+    z-index: 12;
+    border-radius: 50%;
+    border: unset;
+    cursor: pointer;
+  }
+  
+  /* # Responsive Code
+  =================================================*/
+  
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+  
+    .container {
+      max-width: 720px;
+    }
+  
+    .col-md-2 {
+      flex: 0 0 auto;
+      width: 16.66666667%;
+    }
+  
+    .col-md-3 {
+      flex: 0 0 auto;
+      width: 25%;
+    }
+  
+    .col-md-4 {
+      flex: 0 0 auto;
+      width: 33.33333333%;
+    }
+  
+    .col-md-5 {
+      flex: 0 0 auto;
+      width: 41.66666667%;
+    }
+  
+    .col-md-6 {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+  
+    .col-md-7 {
+      flex: 0 0 auto;
+      width: 58.33333333%;
+    }
+  
+    .col-md-8 {
+      flex: 0 0 auto;
+      width: 66.66666667%;
+    }
+  
+    .col-md-9 {
+      flex: 0 0 auto;
+      width: 75%;
+    }
+  
+    .col-md-12 {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  
+    .col-lg-2 {
+      flex: 0 0 auto;
+      width: 16.66666667%;
+    }
+  
+    .col-lg-3 {
+      flex: 0 0 auto;
+      width: 25%;
+    }
+  
+    .col-lg-4 {
+      flex: 0 0 auto;
+      width: 33.33333333%;
+    }
+  
+    .col-lg-5 {
+      flex: 0 0 auto;
+      width: 41.66666667%;
+    }
+  
+    .col-lg-6 {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+  
+    .col-lg-7 {
+      flex: 0 0 auto;
+      width: 58.33333333%;
+    }
+  
+    .col-lg-8 {
+      flex: 0 0 auto;
+      width: 66.66666667%;
+    }
+  
+    .col-lg-9 {
+      flex: 0 0 auto;
+      width: 75%;
+    }
+  
+    .col-lg-12 {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+  
+
+  
+ 

@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito Sans;
+  }
+  
+  :root {
+
+    --pc: #002737;
+    --sc: #00212e;
+
+
+   
+  
+    --gradient: linear-gradient(212deg,
+        rgba(19, 204, 98, 1) 5%,
+        rgba(1, 125, 171, 1) 94%);
+  
+    scroll-behavior: smooth;
+  }
+  
+
+  
+  /* # General
+  =================================================*/
+  body {
+    background-color: var(--primary-color);
+    color: var(--color);
+  }
+  
+  a {
+    color: var(--color);
+    transition: all 0.5s;
+    text-decoration: none;
+  }
+  
+  p {
+    line-height: 30px;
+  }
+  
+  
+  form input {
+    border: 1px solid #ddd;
+  }
+  
+  
+  /* # Common Class
+  =================================================*/
+
+  
+  
+  /* # Common Components
+  =================================================*/
+
+  /* Breadcrumbs ___________Starrts */
+ 
+  
+  /*Separator_____________Start*/
+  
+  
+  /* site  button_____________Start*/
+  
+  
+  /* Social Icons _____________Start*/
+
+  
+  /* pagination_____________start */
+  
+  
+  /* # Header
+  =================================================*/
+
+  
+  /* # Home page
+  =================================================*/
+  
+
+  /* # Single Page
+  =================================================*/
+  
+  /* Blog header _____________start */
+  
+
+  
+  /* Blog sidebar_____________start */
+
+  
+  /* table of content */
+
+  
+  /* Blog Contents _____________start */
+
+  
+  /* table */
+
+  
+  /* blockquote */
+  
+  
+  /* pros-cons */
+
+  
+  /* widgets */
+
+  
+  /* Accordians faq */
+
+  
+  /* # All Author  and Author Single Page 
+  =================================================*/
+
+  
+  /* # Contact Page Templates
+  =================================================*/
+
+  
+  /* # Thank You || Search Not Found  || 404 Page
+  =================================================*/
+
+
+  /* # Footer
+  =================================================*/
+
+  
+  /* # Scroll top button
+  =================================================*/
+  #myBtn {
+    font-size: 18px;
+    background-color: var(--secondary-color);
+  }
+  
+  /* # Responsive Code
+  =================================================*/
+  @media screen and (max-width: 992px) {}
+  @media screen and (max-width: 768px) {}
+  @media screen and (max-width: 600px) {}
