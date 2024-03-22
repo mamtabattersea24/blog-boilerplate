@@ -6,43 +6,103 @@
   }
   
   :root {
-
     --pc: #002737;
     --sc: #00212e;
 
+    --black: #000;
+    --white: #fff;
 
-   
+    --text: #767676;
+
+    --fw-3: 500;
+    --fw-2: 600;
+    --fw-1: 700;
+    
+    --fs-1: 18px;
+    --fs-2: 16px;
+    --fs-3: 14px;
+
+    --radius: 4px;
+    --shadow:  2px 1px 12px 2px #7e7e7e7a;  
+    --border: rgb(211, 211, 211);
+
+    --transition: all 0.3s ease-in-out;
   
     --gradient: linear-gradient(212deg,
         rgba(19, 204, 98, 1) 5%,
         rgba(1, 125, 171, 1) 94%);
   
     scroll-behavior: smooth;
+
   }
-  
 
   
   /* # General
   =================================================*/
   body {
-    background-color: var(--primary-color);
-    color: var(--color);
+    background-color: var(--white);
+    color: var(--text);
   }
   
   a {
-    color: var(--color);
+    color: var(--pc);
     transition: all 0.5s;
     text-decoration: none;
   }
-  
-  p {
-    line-height: 30px;
+
+    
+  h6,
+  .h6,
+  h5,
+  .h5,
+  h4,
+  .h4,
+  h3,
+  .h3,
+  h2,
+  .h2,
+  h1,
+  .h1 {
+    font-weight:var(--fw-1) !important;
+    line-height: 1.5;
+    text-transform: capitalize;
   }
   
-  
-  form input {
-    border: 1px solid #ddd;
+  h1,
+  .h1 {
+    font-size: clamp(1.2rem, calc(1.2rem + 1.5vw), 2.5rem) !important;
   }
+  
+  h2,
+  .h2 {
+    font-size: clamp(1.325rem, calc(1.325rem + 0.9vw), 2rem) !important;
+  }
+  
+  h3,
+  .h3 {
+    font-size: clamp(1.3rem, calc(1.3rem + 0.6vw), 1.75rem) !important;
+  }
+  
+  h4,
+  .h4 {
+    font-size: clamp(1.275rem, calc(1.275rem + 0.3vw), 1.5rem) !important;
+  }
+  
+  h5,
+  .h5 {
+    font-size: 1.25rem !important;
+  }
+  
+  h6,
+  .h6 {
+    font-size: 1rem !important;
+  }
+
+
+
+  
+  
+
   
   
   /* # Common Class
@@ -70,6 +130,69 @@
   
   /* # Header
   =================================================*/
+  header{
+    --head-height : 50px;
+    height:var(--head-height);
+    background: var(--white);
+    position: relative;
+  }
+
+  header,
+  header > .container,
+  .sn-menu-search-form,
+  .sn-menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sn-menu{
+    position:absolute;
+  }
+
+  .sn-menu ul{
+    list-style:none;
+    gap: 20px;
+  }
+
+  .sn-menu ul {
+    position: fixed;
+    top:var(--head-height);;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    width: 300px;
+    padding: 30px;
+    z-index: 10;
+    transform: translateX(-100%);
+    transition: var(--transition);
+    display: block;
+}
+
+.sn-menu ul .active{
+  transform: translateX(0%);
+  transition: var(--transition);
+}
+
+
+.sn-menu-search-form {
+  position: absolute;
+  top:var(--head-height);
+  right: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: -1;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  border:var(--border);
+  transform: translateY(-50px);
+  transition: var(--transition);
+}
+
+.sn-menu-search-form.active{
+  transform: translateY(0px);
+  transition: var(--transition);
+}
 
   
   /* # Home page
@@ -125,7 +248,7 @@
   
   /* # Scroll top button
   =================================================*/
-  #myBtn {
+  #scroll_to_top {
     font-size: 18px;
     background-color: var(--secondary-color);
   }

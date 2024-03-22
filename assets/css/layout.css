@@ -31,122 +31,109 @@
   
   /* # General
   =================================================*/
+
+    body {
+      word-wrap: break-word;
+    }
   
-  h6,
-  .h6,
-  h5,
-  .h5,
-  h4,
-  .h4,
-  h3,
-  .h3,
-  h2,
-  .h2,
-  h1,
-  .h1 {
-    font-weight: 700 !important;
-    line-height: 1.5;
-    text-transform: capitalize;
-  }
-  
-  h1,
-  .h1 {
-    font-size: clamp(1.2rem, calc(1.2rem + 1.5vw), 2.5rem) !important;
-  }
-  
-  h2,
-  .h2 {
-    font-size: clamp(1.325rem, calc(1.325rem + 0.9vw), 2rem) !important;
-  }
-  
-  h3,
-  .h3 {
-    font-size: clamp(1.3rem, calc(1.3rem + 0.6vw), 1.75rem) !important;
-  }
-  
-  h4,
-  .h4 {
-    font-size: clamp(1.275rem, calc(1.275rem + 0.3vw), 1.5rem) !important;
-  }
-  
-  h5,
-  .h5 {
-    font-size: 1.25rem !important;
-  }
-  
-  h6,
-  .h6 {
-    font-size: 1rem !important;
-  }
-  
-  .all-page :is(h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6) {
-    margin-bottom: 15px !important;
-  }
-  
-  
-  img,
-  svg {
+    img,
+    svg {
     vertical-align: middle;
-  }
+    }
 
-  form input {
-    width: 100%;
-    padding: 22px;
-    border-radius: 4px;
-  }
-  
-  input,
-  button,
-  textarea {
-    font-size: 1rem;
-  }
-  
-  
-  button {
-    cursor: pointer;
-    border: unset;
-  }
+    input{
+      width: 100%;
+    }
+    input, input:focus, button{
+      border: none; 
+      outline: none;  
+    }
 
-  [role=button] {
-    cursor: pointer
-}
+    button{
+      background: unset;
+    }
   
-
+    button,
+    [role=button],
+    [class*='btn'] {
+      cursor: pointer;  
+    }
   
-  figure {
+    figure {
     max-width: 100%;
-  }
+    }
   
-  body {
-    word-wrap: break-word;
-  }
+
   
   /* # Common Class
   =================================================*/
+
+  /* Flex ___________ Starts */
+
+  [class*="flex"]{
+    display: flex;
+    align-items: center;
+  }
+
+  [class$="gap"]{
+    gap: 20px;
+  }
+
+  [class$="center"]{
+    justify-content: center;
+  }
+
+  [class$="between"]{
+    justify-content:space-between;
+  }
+
+
+  /* grid ___________ Starts */
+
+  [class*="grid"] {
+    display: grid;
+    align-items: center;
+    gap: 20px;
+  }
   
+  .grid-30 {
+    grid-template-columns: 30% auto;
+  }
+  .grid-reverse-30 {
+    grid-template-columns: auto 30%;
+  }
+  .grid-50-50 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* all-page ___________ Starts */
+
+  .all-page :is(h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6) {
+    margin-bottom: 15px !important;
+  }
+
  
   
   /* # Common Components
   =================================================*/
   
   /* Breadcrumbs ___________Starts */
+  
+  
+  /* Site Cards _____________Starts */
  
   
+  /* Separator _____________Start*/
  
   
-  /* Site Cards_____________Starts */
- 
-  
-  /* Separator_____________Start*/
- 
-  
-  /*Sep button_____________Start*/
+  /* Sep button _____________Start*/
   
   
   /* Social Icons _____________Start*/
 
   
-  /* pagination_____________start */
+  /* pagination _____________start */
   
   .pagination {
     margin-top: 50px;
@@ -190,8 +177,9 @@
   }
   
   
-  /* # Header
+  /* # Header [mobile size]
   =================================================*/
+
  
   /* # Home Page
   =================================================*/
@@ -243,7 +231,7 @@
   
   /* # Scroll top button
   =================================================*/
-  #myBtn {
+  #scroll_to_top {
     position: fixed;
     bottom: 48px;
     height: 45px;
@@ -262,6 +250,10 @@
     .container {
       max-width: 540px;
     }
+
+    /* Blog header _____________start */
+
+
   }
   
   @media (min-width: 768px) {
