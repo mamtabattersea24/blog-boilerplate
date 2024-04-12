@@ -75,15 +75,15 @@
     align-items: center;
   }
 
-  [class$="gap"]{
+  [class*="gap"]{
     gap: 20px;
   }
 
-  [class$="center"]{
+  [class*="center"]{
     justify-content: center;
   }
 
-  [class$="between"]{
+  [class*="between"]{
     justify-content:space-between;
   }
 
@@ -102,16 +102,75 @@
   .grid-reverse-30 {
     grid-template-columns: auto 30%;
   }
-  .grid-50-50 {
+
+  .grid-2 {
     grid-template-columns: repeat(2, 1fr);
   }
-
-
-  /* all-page ___________ Starts */
-
-  .all-page :is(h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6) {
-    margin-bottom: 15px !important;
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
   }
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+
+/* all-page property for all page ___ start */
+  
+.all-page {
+  padding: clamp(1.25rem, 0.3571rem + 2.381vw, 2.5rem) 0;
+}
+
+.all-page ul {
+  list-style-type: none;
+}
+
+.all-page :is(ul, ol):not([class*='social-links'] ul, .toc-body>ul) {
+  padding-left: 1.5rem;
+}
+
+.all-page :is(ul, ol, p, .wp-block-image):not([class*='social-links'] ul) {
+  margin-bottom: 20px;
+}
+
+.all-page :is(ul, ol):not([class*='social-links'] ul) li {
+  line-height: 1.7;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.all-page ul li:not(.sn-toc-wrap ul li, [class*='social-links'] ul li)::before {
+  position: absolute;
+  left: -25px;
+  top: 9px;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-size: cover;
+}
+
+.all-page :is(h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6) {
+  margin-bottom: 15px !important;
+}
+
+/* all blocks remove margin-bottom from last child */
+
+:is(.sn-card-content, .page-status-content, .sn-pros-cons-body, blockquote, [class*='block-content'], .toc-body, ul, ol)>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+:is(blockquote, [class*='gd-block']) {
+  margin-bottom: 30px;
+}
+
+.all-page,
+.number-remove {
+  counter-reset: term definition;
+}
+
+.all-page .number>*:not(a)::before {
+  counter-increment: term;
+  content: counter(term) ". ";
+}
 
  
   
@@ -127,7 +186,7 @@
   /* Separator _____________Start*/
  
   
-  /* Sep button _____________Start*/
+  /* btn  _____________Start*/
   
   
   /* Social Icons _____________Start*/
@@ -217,7 +276,7 @@
   =================================================*/
   
   
-  /* # Contact Page Templates
+  /* # Contact Page 
   =================================================*/
   
   
